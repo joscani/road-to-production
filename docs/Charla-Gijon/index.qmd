@@ -1,0 +1,43 @@
+---
+title: "Primeros pasos en pRoductivización"
+subtitle: "\" Qué podemos hacer con R\""
+author: "Cañadas Reche, José Luis"
+institute: "Universidad de Oviedo"
+date: "2023-10-23"
+date-format: iso
+format:
+  revealjs: 
+    slide-number: true
+    theme: theme.scss
+    css: theme.css
+    linkcolor: "#1a1a1a"
+    highlight-style: github
+    code-copy: true
+    code-link: true
+    code-overflow: wrap
+    code-block-bg: true
+    transition: fade
+    width: 1600
+editor: source
+title-slide-attributes: 
+  data-background-image: "images/esferas.jpeg"
+  data-background-size: "45%"
+  data-background-position: "right"
+---
+
+## [Sobre mi]{style="color: #000000;"} {.dark background-color="#333333"}
+
+<br>
+
+::: columns
+::: {.column width="40%"}
+![](images/profile2.jpg){#headshot height="500px"}
+:::
+
+::: {.column width="60%"}
+-   Soy José Luis Cañadas Reche 👋
+-   Data Scientist/ Estadístico 💻
+-   ️Orange Spain 🍊
+:::
+:::
+

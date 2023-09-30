@@ -1,0 +1,202 @@
+/* CSS Themeing for slides */
+
+/*=========Color Palette=========*/
+
+:root {
+  --white:#ffffff;
+  --dark-gray:#333333;
+  --black:#000000;
+}
+
+
+/*=========General Slide Specs=========*/
+#title-slide > p {
+        text-align: left;
+        padding : 0;
+        margin : 0;
+        font-size: 80%;
+}
+
+.reveal h1 {
+    text-align: left;
+    inline-size: 50%;
+    padding : 0;
+    margin : 0;
+    font-size: 50px;
+    font-weight: bold;
+}
+
+.reveal .subtitle {
+    text-align: left;
+    inline-size: 50%;
+    padding : 0;
+    margin : 0;
+    font-size: 90%;
+    font-style: italic;
+    font-weight: bold;
+}
+
+body > div.reveal.focused.has-horizontal-slides.ready.fade > div.backgrounds > div.slide-background.center.present > div {
+  background-color: var(--white);
+}
+/* headshot frame */
+#headshot {
+  display:inline-block;
+  border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+  line-height:3em;
+  border:solid 10px;
+  border-color: var(--white);
+  border-style: solid;
+}
+
+
+/*==============Light Slide Specs==============*/
+
+/* slide text area background color */
+.light {
+  background-color: var(--white);
+  height: 800px;
+  margin-top: 50px;
+}
+
+.light h2 {
+  background-color: var(--dark-gray);
+  font-size: 80px;
+  color:#fff;
+  display: inline-block;
+  padding: 2px;
+  border-radius: 25px 15px 225px 15px/15px 225px 15px 255px;
+  border:dotted 3px;
+  border-color: var(--black);
+}
+
+.light blockquote{
+  color:#000;
+}
+
+.light .memes {
+  border-width: 5px;
+  border-style: solid;
+  border-color: var(--black);
+  border-radius: 225px 15px 225px 15px/15px 245px 15px 205px;
+}
+
+/* Progress Bar Specs */
+body > div.reveal.focused.has-horizontal-slides.ready.fade.has-light-background > div.backgrounds {
+  background-color: var(--white);
+}
+
+body > div.reveal.focused.has-horizontal-slides.ready.fade.has-light-background > div.progress {
+  color: var(--medium-purple);
+  height: 5px;
+  margin-bottom: 4.5px;
+}
+
+/*==============Dark Slide Specs==============*/
+
+/* slide text area background color */
+.dark {
+  background-color: var(--dark-gray);
+  height: 800px;
+  margin-top: 50px;
+}
+
+.dark h2 {
+  background-color: var(--white);
+  font-size: 80px;
+  display: inline-block;
+  padding: 2px;
+  border-radius: 25px 15px 225px 15px/15px 225px 15px 255px;
+  border:solid 3px;
+  border-color: var(--black);
+  border-style: dotted;
+}
+
+.dark h2 > span > code{
+  color: rgb(71, 88, 171);
+}
+
+.dark h1 > code{
+  color: rgb(71, 88, 171);
+}
+
+.dark blockquote{
+  color:#fff;
+}
+
+.dark .memes {
+  border-width: 5px;
+  border-style: solid;
+  border-color: var(--white);
+  border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+}
+
+body > div.reveal.focused.has-horizontal-slides.ready.fade.has-dark-background > div.backgrounds{
+  background-color: var(--dark-gray);
+}
+
+body > div.reveal.focused.has-horizontal-slides.ready.fade.has-light-background > div.backgrounds{
+  background-color: var(--white);
+}
+
+/* Progress Bar Specs */
+body > div.reveal.focused.has-horizontal-slides.ready.fade.has-dark-background > div.progress > span {
+  color: var(--white);
+}
+
+body > div.reveal.focused.has-horizontal-slides.ready.fade.has-light-background > div.progress > span {
+  color: var(--dark-gray);
+  height: 5px;
+  margin-bottom: 4.5px;
+}
+
+.column a.link{
+  color:var(--white);
+  text-decoration: underline;
+}
+
+body > div.reveal.focused.has-horizontal-slides.ready.fade.has-dark-background > div.slide-number{
+  color: var(--white);
+}
+
+body > div.reveal.focused.has-horizontal-slides.ready.fade.has-light-background > div.slide-number{
+  color: var(--dark-gray);
+}
+
+/*==============Transition Slide Specs==============*/
+
+/* slide text area background color */
+
+.trans h1 {
+  background-color: #000000;
+  color:#ffffff;
+  display: inline-block;
+  padding: 15px;
+  border-radius: 25px 15px 225px 15px/15px 225px 15px 255px;
+  border:solid 3px;
+  font-size: 2em;
+  border-color: var(--dark-gray);
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0.80;
+}
+
+.transdark h1 {
+  background-color: #ffffff;
+  color:#000000;
+  display: inline-block;
+  padding: 15px;
+  border-radius: 25px 15px 225px 15px/15px 225px 15px 255px;
+  border:solid 3px;
+  font-size: 2em;
+  border-color: var(--dark-gray);
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0.80;
+}

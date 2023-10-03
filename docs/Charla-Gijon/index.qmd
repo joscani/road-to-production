@@ -84,14 +84,6 @@ Hablando de modelos podría ser cosas como:
 :::
 
 
-##  {.transdark background-color="#333333" background-image="images/trans2.png" background-size="65%"}
-
-<h1>
-
-<center>[Dónde estamos trabajando]{style="color: #000000;"}</center>
-
-</h1>
-
 
 ## [Dónde estamos trabajando. Ejemplos]{style="color: #000000;"} {.dark background-color="#333333"}
 
@@ -127,14 +119,6 @@ Hablando de modelos podría ser cosas como:
 :::
 
 
-
-##  {.trans background-color="#ffffff" background-image="images/trans3.png" background-size="65%"}
-
-<h1>
-
-<center>[¿Qué podemos hacer con R ?]{style="color: #ffffff;"}</center>
-
-</h1>
 
 ## <span style="color: #ffffff;">¿Qué podemos hacer con R? {.light background-color="#ffffff"}
 

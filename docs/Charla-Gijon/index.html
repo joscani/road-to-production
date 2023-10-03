@@ -336,7 +336,7 @@
 Cañadas Reche, José Luis 
 </div>
         <p class="quarto-title-affiliation">
-            Universidad de Oviedo
+            Escuela politécnica de ingeniería de Gijón
           </p>
     </div>
 </div>
@@ -357,6 +357,115 @@ Cañadas Reche, José Luis
 </ul>
 </div>
 </div>
+</section>
+<section id="qué-quiero-contar" class="slide level2 light" data-background-color="#ffffff">
+<h2><span style="color: #ffffff;">Qué quiero contar</span></h2>
+<div>
+<p><br></p>
+<ul>
+<li class="fragment"><p>¿Qué es esto de poner en “producción” los modelos?</p></li>
+<li class="fragment"><p>Depende de dónde estemos trabajando</p></li>
+<li class="fragment"><p>¿Se puede con R? ¿Con qué herramientas?</p></li>
+<li class="fragment"><p>¿Cómo es en una gran empresa?</p></li>
+</ul>
+</div>
+</section>
+<section id="section" class="slide level2 trans" data-background-color="#ffffff" data-background-image="images/trans1.png" data-background-size="65%">
+<h2></h2>
+<h1>
+<center>
+<span style="color: #ffffff;">¿Poner modelos en producción?<br> ¿y por qué?</span>
+</center>
+</h1>
+</section>
+<section id="productivizar-y-por-qué" class="slide level2 light" data-background-color="#ffffff">
+<h2><span style="color: #ffffff;">¿Productivizar ? ¿y por qué?</span></h2>
+<p><strong>Productivizar</strong>: No existe la palabra en castellano</p>
+<p><br></p>
+<div class="fragment">
+<p>Hablando de modelos podría ser cosas como:</p>
+</div>
+<div>
+<ul>
+<li class="fragment">El modelo es capaz de generar una salida dada una entrada.</li>
+<li class="fragment">Realiza el paso anterior sin intervención humana/manual</li>
+<li class="fragment">Se integra con la infraestructura de la empresa</li>
+<li class="fragment">El modelo está versionado de alguna forma</li>
+<li class="fragment">El software utilizado está “congelado” y se puede portar a otra máquina</li>
+</ul>
+</div>
+</section>
+<section id="section-1" class="slide level2 transdark" data-background-color="#333333" data-background-image="images/trans2.png" data-background-size="65%">
+<h2></h2>
+<h1>
+<center>
+<span style="color: #000000;">Dónde estamos trabajando</span>
+</center>
+</h1>
+</section>
+<section id="dónde-estamos-trabajando.-ejemplos" class="slide level2 dark" data-background-color="#333333">
+<h2><span style="color: #000000;">Dónde estamos trabajando. Ejemplos</span></h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><br></p>
+<div>
+<ul>
+<li class="fragment"><p>Soy freelance. Un cliente ejecutar modelo una vez al mes</p></li>
+<li class="fragment"><p>Trabajo en Cabify. Dar precio viaje de forma muy rápida</p></li>
+<li class="fragment"><p>Trabajo en Orange. Scores diarios sobre 4 millones de líneas</p></li>
+</ul>
+</div>
+</div><div class="column" style="width:50%;">
+<p><br></p>
+<div>
+<ul>
+<li class="fragment"><p>Freelance: Una API, una ejecución programada con un crontab.</p></li>
+<li class="fragment"><p>Cabify: Una API que responda rápido, quizá dockerizada y en Kubernetes. Gestión de concurrencia</p></li>
+<li class="fragment"><p>Orange: Predicción en batch por las noches. Gestión de errores, planes de rollback.</p></li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<section id="section-2" class="slide level2 trans" data-background-color="#ffffff" data-background-image="images/trans3.png" data-background-size="65%">
+<h2></h2>
+<h1>
+<center>
+<span style="color: #ffffff;">¿Qué podemos hacer con R ?</span>
+</center>
+</h1>
+</section>
+<section id="qué-podemos-hacer-con-r" class="slide level2 light" data-background-color="#ffffff">
+<h2><span style="color: #ffffff;">¿Qué podemos hacer con R?</span></h2>
+<div>
+<ul>
+<li class="fragment">Prototipar el modelo</li>
+<li class="fragment">Creación de la API</li>
+<li class="fragment">Dockerizar la API de forma que sea portable</li>
+<li class="fragment">Interactuar desde R con otras herramientas más apropiadas para predicción en batch</li>
+</ul>
+</div>
+</section>
+<section id="herramientas-y-otras-cosas-en-r" class="slide level2 light" data-background-color="#ffffff">
+<h2><span style="color: #ffffff;">Herramientas y otras cosas en R</span></h2>
+<div>
+<ul>
+<li class="fragment"><a href="https://rstudio.github.io/renv/articles/renv.html"><code>renv</code></a></li>
+<li class="fragment"><a href="https://vetiver.rstudio.com/"><code>vetiver</code></a></li>
+<li class="fragment"><a href="https://www.rplumber.io/"><code>plumber</code></a></li>
+<li class="fragment"><a href="https://hub.docker.com/u/rocker"><code>rocker</code></a></li>
+<li class="fragment"><a href="https://github.com/r-hub/r-minimal"><code>r-hub/r-minimal</code></a></li>
+<li class="fragment"><a href="https://h2o.ai/resources/download/">Wrapper con cosas como h2o</a></li>
+</ul>
+</div>
+</section>
+<section id="section-3" class="slide level2 transdark" data-background-color="#333333" data-background-image="images/whybis.jpg" data-background-size="65%">
+<h2></h2>
+<h1>
+<center>
+<span style="color: #000000;">¡ A la demo !</span>
+</center>
+</h1>
 <div class="footer footer-default">
 
 </div>

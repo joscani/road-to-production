@@ -2,7 +2,8 @@
 title: "Primeros pasos en pRoductivización"
 subtitle: "\" Qué podemos hacer con R\""
 author: "Cañadas Reche, José Luis"
-institute: "Universidad de Oviedo"
+class: "Grado en ciencia e ingeniería de datos"
+institute: "Escuela politécnica de ingeniería de Gijón"
 date: "2023-10-23"
 date-format: iso
 format:
@@ -41,3 +42,129 @@ title-slide-attributes:
 :::
 :::
 
+## <span style="color: #ffffff;">Qué quiero contar {.light background-color="#ffffff"}
+
+::: incremental
+<br>
+
+-   ¿Qué es esto de poner en "producción" los modelos? 
+
+-   Depende de dónde estemos trabajando
+
+-   ¿Se puede con R? ¿Con qué herramientas? 
+
+-   ¿Cómo es en una gran empresa? 
+:::
+
+##  {.trans background-color="#ffffff" background-image="images/trans1.png" background-size="65%"}
+
+<h1>
+
+<center>[¿Poner modelos en producción?<br> ¿y por qué?]{style="color: #ffffff;"}</center>
+
+</h1>
+
+
+## <span style="color: #ffffff;">¿Productivizar ? ¿y por qué? {.light background-color="#ffffff"}
+
+**Productivizar**: No existe la palabra en castellano
+
+<br>
+
+::: fragment
+Hablando de modelos podría ser cosas como:
+:::
+
+::: incremental
+-   El modelo es capaz de generar una salida dada una entrada. 
+-   Realiza el paso anterior sin intervención humana/manual
+-   Se integra con la infraestructura de la empresa
+-   El modelo está versionado de alguna forma
+-   El software utilizado está "congelado" y se puede portar a otra máquina
+:::
+
+
+##  {.transdark background-color="#333333" background-image="images/trans2.png" background-size="65%"}
+
+<h1>
+
+<center>[Dónde estamos trabajando]{style="color: #000000;"}</center>
+
+</h1>
+
+
+## [Dónde estamos trabajando. Ejemplos]{style="color: #000000;"} {.dark background-color="#333333"}
+
+::: columns
+::: {.column width="50%"}
+
+<br>
+
+::: {.incremental}
+
+- Soy freelance. Un cliente ejecutar modelo una vez al mes
+
+- Trabajo en Cabify. Dar precio viaje de forma muy rápida
+
+- Trabajo en Orange. Scores diarios sobre 4 millones de líneas
+
+:::
+:::
+
+::: {.column width="50%"}
+<br>
+
+::: {.incremental}
+
+- Freelance: Una API, una ejecución programada con un crontab. 
+
+- Cabify:  Una API que responda rápido, quizá dockerizada y en Kubernetes. Gestión de concurrencia
+
+- Orange: Predicción en batch por las noches. Gestión de errores, planes de rollback.
+
+:::
+:::
+:::
+
+
+
+##  {.trans background-color="#ffffff" background-image="images/trans3.png" background-size="65%"}
+
+<h1>
+
+<center>[¿Qué podemos hacer con R ?]{style="color: #ffffff;"}</center>
+
+</h1>
+
+## <span style="color: #ffffff;">¿Qué podemos hacer con R? {.light background-color="#ffffff"}
+
+::: {.incremental}
+
+- Prototipar el modelo
+- Creación de la API 
+- Dockerizar la API de forma que sea portable
+- Interactuar desde R con otras herramientas más apropiadas para predicción en batch
+
+:::
+
+## <span style="color: #ffffff;">Herramientas y otras cosas en R {.light background-color="#ffffff"}
+
+::: {.incremental}
+
+- [`renv`](https://rstudio.github.io/renv/articles/renv.html)
+- [`vetiver`](https://vetiver.rstudio.com/)
+- [`plumber`](https://www.rplumber.io/)
+- [`rocker`](https://hub.docker.com/u/rocker)
+- [`r-hub/r-minimal`](https://github.com/r-hub/r-minimal)
+- [Wrapper con cosas como h2o](https://h2o.ai/resources/download/)
+
+:::
+
+
+##  {.transdark background-color="#333333" background-image="images/whybis.jpg" background-size="65%"}
+
+<h1>
+
+<center>[¡ A la demo !]{style="color: #000000;"}</center>
+
+</h1>

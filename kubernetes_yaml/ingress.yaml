@@ -1,0 +1,39 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: plumber-on-k8s-ingress
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: /$1
+spec:
+  ingressClassName: nginx-example
+  rules:
+  - http:
+      paths:
+      - path: /health
+        pathType: Prefix
+        backend:
+          service:
+            name: plumber-on-k8s-service
+            port:
+              number: 8080
+      - path: /predict
+        pathType: Prefix
+        backend:
+          service:
+            name: plumber-on-k8s-service
+            port:
+              number: 8080
+      - path: /predict_async
+        pathType: Prefix
+        backend:
+          service:
+            name: plumber-on-k8s-service
+            port:
+              number: 8080
+      - path: /full_posterior
+        pathType: Prefix
+        backend:
+          service:
+            name: plumber-on-k8s-service
+            port:
+              number: 8080

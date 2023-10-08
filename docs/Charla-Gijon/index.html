@@ -443,6 +443,64 @@ Cañadas Reche, José Luis
 </ul>
 </div>
 </section>
+<section id="renv" class="slide level2 light" data-background-color="#ffffff">
+<h2><span style="color: #ffffff;"> renv</span></h2>
+<div>
+<ul>
+<li class="fragment">Entornos a lo <em>python</em></li>
+<li class="fragment"><code>renv.lock</code> fichero dónde se especifican dependencias</li>
+<li class="fragment"><code>renv</code> puede usar cache y ahorrar espacio. A diferencia de los conda-env</li>
+<li class="fragment">Aislar el entorno</li>
+</ul>
+</div>
+</section>
+<section id="vetiver" class="slide level2 light" data-background-color="#ffffff">
+<h2><span style="color: #ffffff;"> vetiver</span></h2>
+<div>
+<ul>
+<li class="fragment">MLOps para <code>R</code> y <code>Python</code></li>
+<li class="fragment">En R se integra bien con <code>tidymodels</code></li>
+<li class="fragment">En python con sklearn</li>
+<li class="fragment">Facilita creación de apis con plumber en <code>R</code> y fastapi en <code>python</code></li>
+<li class="fragment">Crear Dockerfile</li>
+<li class="fragment">Versionar modelos, uso de <code>pins</code></li>
+</ul>
+</div>
+</section>
+<section id="rocker-y-r-hubminimal" class="slide level2 light" data-background-color="#ffffff">
+<h2><span style="color: #ffffff;"> rocker y r-hub/minimal</span></h2>
+<div>
+<ul>
+<li class="fragment">Imágenes de docker</li>
+<li class="fragment">Rocker. Imagen ubuntu + R.
+<ul>
+<li class="fragment">Más fácil de configurar</li>
+<li class="fragment">Se instala más rápido</li>
+<li class="fragment">La imagen final de docker ocupa bastante. &gt;2Gb</li>
+</ul></li>
+<li class="fragment">r-hub/r-minimal.
+<ul>
+<li class="fragment">Imagen Alpine-linux liviana</li>
+<li class="fragment">Tarda más en instalar librerías</li>
+<li class="fragment">Instala librerías de R sin la ayuda ni viñetas</li>
+<li class="fragment">La imagen final de docker es pequeña. &lt; 700 Mb</li>
+</ul></li>
+</ul>
+</div>
+</section>
+<section id="h2o" class="slide level2 light" data-background-color="#ffffff">
+<h2><span style="color: #ffffff;"> H2O</span></h2>
+<div>
+<ul>
+<li class="fragment">Escrito en java</li>
+<li class="fragment">Wrapper para R y Python</li>
+<li class="fragment">Gestión muy eficiente de la memoria</li>
+<li class="fragment">Puede usarse en clusters de BigData con sparkling-water</li>
+<li class="fragment">Se puede poner en producción de la misma forma que cualquier código de spark</li>
+<li class="fragment">Para predicción en batch para datasets muy grande es imbatible</li>
+</ul>
+</div>
+</section>
 <section id="section-1" class="slide level2 transdark" data-background-color="#333333" data-background-image="images/whybis.jpg" data-background-size="65%">
 <h2></h2>
 <h1>
@@ -450,6 +508,31 @@ Cañadas Reche, José Luis
 <span style="color: #000000;">¡ A la demo !</span>
 </center>
 </h1>
+</section>
+<section id="y-ahora-qué" class="slide level2 light" data-background-color="#ffffff">
+<h2><span style="color: #ffffff;"> ¿Y ahora qué?</span></h2>
+<p>Hora de los sysadmin, arquitectos (datos, cloud, sistemas). ¡Ojo, no es fácil!</p>
+<div>
+<ul>
+<li class="fragment">Desplegar docker en servidor interno</li>
+<li class="fragment">Usar docker compose o kubernetes en sistemas internos</li>
+<li class="fragment">Desplegar en la nube.
+<ul>
+<li class="fragment">Azure . <a href="https://github.com/Azure/AzureContainers">AzureContainer package</a></li>
+</ul></li>
+</ul>
+</div>
+</section>
+<section id="algunos-enlaces" class="slide level2 light" data-background-color="#ffffff">
+<h2><span style="color: #ffffff;"> Algunos enlaces</span></h2>
+<p><br></p>
+<ul>
+<li><p><a href="https://posit.co/blog/using-r-in-production-with-posit-connect/?li_fat_id=0e3a3769-1643-4513-acc9-f1813833b3fb">R in production</a></p></li>
+<li><p><a href="https://rstudio.github.io/promises/articles/promises_05_future_promise.html">plumber + promises</a></p></li>
+<li><p><a href="https://mdneuzerling.com/post/hosting-a-plumber-api-with-kubernetes/">plumber + kubernetes</a></p></li>
+<li><p><a href="https://blog.djnavarro.net/posts/2023-01-10_kubernetes/#expose-an-api">plumber + kubernetes djnavarro</a></p></li>
+<li><p><a href="https://restrserve.org/">Alternativa a plumber <code>RestRserve</code></a></p></li>
+</ul>
 <div class="footer footer-default">
 
 </div>

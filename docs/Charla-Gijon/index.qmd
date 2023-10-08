@@ -45,6 +45,7 @@ title-slide-attributes:
 ## <span style="color: #ffffff;">Qué quiero contar {.light background-color="#ffffff"}
 
 ::: incremental
+
 <br>
 
 -   ¿Qué es esto de poner en "producción" los modelos? 
@@ -144,6 +145,60 @@ Hablando de modelos podría ser cosas como:
 
 :::
 
+## <span style="color: #ffffff;"> renv {.light background-color="#ffffff"}
+
+::: {.incremental}
+
+- Entornos a lo _python_ 
+- `renv.lock` fichero dónde se especifican dependencias
+- `renv` puede usar cache y ahorrar espacio. A diferencia de los conda-env
+- Aislar el entorno
+:::
+
+
+## <span style="color: #ffffff;"> vetiver {.light background-color="#ffffff"}
+
+::: {.incremental}
+
+- MLOps para `R` y `Python`
+- En R se integra bien con `tidymodels`
+- En python con sklearn
+- Facilita creación de apis con plumber en `R` y fastapi en `python`
+- Crear Dockerfile
+- Versionar modelos, uso de `pins`
+
+:::
+
+
+## <span style="color: #ffffff;"> rocker y r-hub/minimal {.light background-color="#ffffff"}
+
+::: {.incremental}
+
+- Imágenes de docker
+- Rocker. Imagen  ubuntu + R. 
+  - Más fácil de configurar
+  - Se instala más rápido
+  - La imagen final de docker ocupa bastante. >2Gb
+- r-hub/r-minimal. 
+  - Imagen Alpine-linux liviana
+  - Tarda más en instalar librerías
+  - Instala librerías de R sin la ayuda ni viñetas
+  - La imagen final de docker es pequeña. < 700 Mb
+
+:::
+
+## <span style="color: #ffffff;"> H2O {.light background-color="#ffffff"}
+
+::: {.incremental}
+
+- Escrito en java
+- Wrapper para R y Python
+- Gestión muy eficiente de la memoria
+- Puede usarse en clusters de BigData con sparkling-water
+- Se puede poner en producción de la misma forma que cualquier código de spark
+- Para predicción en batch para datasets muy grande es imbatible
+
+:::
 
 ##  {.transdark background-color="#333333" background-image="images/whybis.jpg" background-size="65%"}
 
@@ -152,3 +207,36 @@ Hablando de modelos podría ser cosas como:
 <center>[¡ A la demo !]{style="color: #000000;"}</center>
 
 </h1>
+
+
+
+## <span style="color: #ffffff;"> ¿Y ahora qué? {.light background-color="#ffffff"}
+
+Hora de los sysadmin, arquitectos (datos, cloud, sistemas). ¡Ojo, no es fácil!
+
+::: {.incremental}
+
+- Desplegar docker en servidor interno
+- Usar docker compose o kubernetes en sistemas internos
+- Desplegar en la nube. 
+  - Azure . [AzureContainer package](https://github.com/Azure/AzureContainers)
+
+
+:::
+
+
+## <span style="color: #ffffff;"> Algunos enlaces {.light background-color="#ffffff"}
+
+<br>
+
+* [R in production](https://posit.co/blog/using-r-in-production-with-posit-connect/?li_fat_id=0e3a3769-1643-4513-acc9-f1813833b3fb)
+
+* [plumber + promises](https://rstudio.github.io/promises/articles/promises_05_future_promise.html)
+
+* [plumber + kubernetes](https://mdneuzerling.com/post/hosting-a-plumber-api-with-kubernetes/)
+
+* [plumber + kubernetes djnavarro](https://blog.djnavarro.net/posts/2023-01-10_kubernetes/#expose-an-api)
+
+* [Alternativa a plumber `RestRserve`](https://restrserve.org/)
+
+

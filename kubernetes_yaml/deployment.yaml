@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: plumber-on-k8s-deployment
+spec:
+  replicas: 4
+  selector:
+    matchLabels:
+      app: plumber-on-k8s
+  template:
+    metadata:
+      labels:
+        app: plumber-on-k8s
+    spec:
+      containers:
+      - name: plumber-on-k8s
+        image: joscani/r-minimal-plumber_async
+        ports:
+        - containerPort: 8080
+        livenessProbe:
+          httpGet:
+            path: /health
+            port: 8080
+          initialDelaySeconds: 35
+          periodSeconds: 35
+        readinessProbe:
+          httpGet:
+            path: /health
+            port: 8080
+          initialDelaySeconds: 35
+          periodSeconds: 35
+

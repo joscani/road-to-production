@@ -219,7 +219,9 @@ Hora de los sysadmin, arquitectos (datos, cloud, sistemas). ¡Ojo, no es fácil!
 - Desplegar docker en servidor interno
 - Usar docker compose o kubernetes en sistemas internos
 - Desplegar en la nube. 
-  - Azure . [AzureContainer package](https://github.com/Azure/AzureContainers)
+  - Azure
+  - GCP
+  - AWS
 
 
 :::

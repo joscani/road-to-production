@@ -1,0 +1,23 @@
+En /media/hd1/Descargas están los yaml para desplegar kubernetes . son un ejemplo
+
+# hay que registrar el docker o construir dentro de
+
+ eval $(minikube docker-env)
+
+
+- Crear rgistro privdo en kubernetes https://kubernetes.io/docs/tasks/configure-pod-container/pull-image-private-registry/
+
+probar con  minikube image load r-minimal-plumber_async
+ minikube image build -t r-minimal-plumber_async .
+
+kubectl get svc
+
+minikube service plumber-on-k8s-service --url
+
+kubectl get ingress
+minikube addons enable ingress
+
+
+
+
+

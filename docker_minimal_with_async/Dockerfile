@@ -21,4 +21,5 @@ RUN  mkdir /opt/ml \
 
 # exponemos el puerto
 EXPOSE 8080
-ENTRYPOINT ["R", "-e", "pr <- plumber::plumb('/opt/ml/plumber.R'); pr$run(host = '0.0.0.0', port = 8080)"]
+CMD R -e "source('launch.R')"
+#ENTRYPOINT ["R", "-e", "pr <- plumber::plumb('/opt/ml/plumber.R'); pr$run(host = '0.0.0.0', port = 8080)"]

@@ -2,7 +2,7 @@ library(brms)
 library(plumber)
 library(tidybayes)
 
-brms_model <- readRDS("brms_model.rds")
+brms_model <- readRDS(here::here("brms_model.rds"))
 
 
 #* @apiTitle brms predict Api
@@ -45,11 +45,4 @@ function(req, res) {
 
   add_epred_draws(data, brms_model)
 
-}
-#* Plot a histogram
-#* @png
-#* @get /plot
-function(){
-  rand <- rnorm(100)
-  hist(rand)
 }

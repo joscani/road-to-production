@@ -1,0 +1,11 @@
+
+- abrir cuenta
+- crear suscripción
+- crear container registry
+
+docker login joscani.azurecr.io
+docker tag joscani/r-minimal-plumber_async joscani.azurecr.io/r-minimal-plumber_async
+
+docker push joscani.azurecr.io/r-minimal-plumber_async
+- create container instance y seleccionar la imagen docker subida
+- en puerto poner 8080 ¿?

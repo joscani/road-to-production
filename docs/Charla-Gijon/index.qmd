@@ -231,6 +231,8 @@ Hora de los sysadmin, arquitectos (datos, cloud, sistemas). ¡Ojo, no es fácil!
 
 <br>
 
+* [Github con slides, código y datos](https://github.com/joscani/road-to-production/tree/main)
+
 * [R in production](https://posit.co/blog/using-r-in-production-with-posit-connect/?li_fat_id=0e3a3769-1643-4513-acc9-f1813833b3fb)
 
 * [plumber + promises](https://rstudio.github.io/promises/articles/promises_05_future_promise.html)

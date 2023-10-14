@@ -9,7 +9,7 @@
 
 library(tidyverse)
 
-test <-  read_csv("/media/hd1/canadasreche@gmail.com/mi_blog/data/test_local.csv")
+test <-  read_csv(here::here("data/test_local.csv"))
 
 base_url <- "http://127.0.0.1:8000"
 

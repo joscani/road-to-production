@@ -8,7 +8,7 @@ options(mc.cores = parallel::detectCores()-1)
 
 # Load data
 
-train <- read_csv("/media/hd1/canadasreche@gmail.com/mi_blog/data/train_local.csv")
+train <- read_csv(here::here("data/train_local.csv"))
 train <- train %>%
   mutate(target1 = as_factor(ifelse(segmento == "Best", "Best", "Other")))
 
@@ -46,7 +46,7 @@ lobstr::obj_size(mod_reload)
 
 #
 
-test <-  read_csv("/media/hd1/canadasreche@gmail.com/mi_blog/data/test_local.csv")
+test <-  read_csv(here::here("data/test_local.csv"))
 
 # estimacion puntual
 predict(mod_reload, head(test), allow_new_levels = TRUE)

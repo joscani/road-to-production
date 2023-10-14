@@ -17,7 +17,7 @@ library(furrr)
 plan(multisession, workers = 6, .cleanup = FALSE)
 options(future.rng.onMisuse="ignore") # future issue
 
-test <-  read_csv("/media/hd1/canadasreche@gmail.com/mi_blog/data/test_local.csv")
+test <-  read_csv(here::here("data/test_local.csv"))
 
 test
 

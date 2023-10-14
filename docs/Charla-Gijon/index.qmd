@@ -231,6 +231,18 @@ Hora de los sysadmin, arquitectos (datos, cloud, sistemas). ¡Ojo, no es fácil!
 
 <br>
 
+:::columns
+::: {.column width="50%"}
+
+__Post en los que me baso para este ejemplo__
+
+  - [Big data para pobres III. ¿Bayesiano?](https://muestrear-no-es-pecado.netlify.app/2021/06/04/big-data-para-pobres-iii-bayesiano/)
+  - [Api y docker con R. parte 1](https://muestrear-no-es-pecado.netlify.app/2022/10/12/api-y-docker-con-r-parte-1/)
+  - [Api y docker con R. parte 2](https://muestrear-no-es-pecado.netlify.app/2022/10/30/api-y-docker-con-r-parte-2)
+:::
+::: {.column width="50%"}  
+__Otros enlaces__
+
 * [Github con slides, código y datos](https://github.com/joscani/road-to-production/tree/main)
 
 * [R in production](https://posit.co/blog/using-r-in-production-with-posit-connect/?li_fat_id=0e3a3769-1643-4513-acc9-f1813833b3fb)
@@ -242,5 +254,6 @@ Hora de los sysadmin, arquitectos (datos, cloud, sistemas). ¡Ojo, no es fácil!
 * [plumber + kubernetes djnavarro](https://blog.djnavarro.net/posts/2023-01-10_kubernetes/#expose-an-api)
 
 * [Alternativa a plumber `RestRserve`](https://restrserve.org/)
-
+:::
+:::
 

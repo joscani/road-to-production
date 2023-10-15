@@ -9,3 +9,6 @@ docker tag joscani/r-minimal-plumber_async joscani.azurecr.io/r-minimal-plumber_
 docker push joscani.azurecr.io/r-minimal-plumber_async
 - create container instance y seleccionar la imagen docker subida
 - en puerto poner 8080 ¿?
+
+docker tag r-docker-plumber_nosync joscani.azurecr.io/r-docker-plumber_nosync
+docker push joscani.azurecr.io/r-docker-plumber_nosync

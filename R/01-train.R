@@ -41,6 +41,14 @@ saveRDS(mod, here::here("brms_model.rds"))
 mod_reload <- readRDS(here::here("brms_model.rds"))
 
 
+summary(mod_reload)
+fixef(mod_reload)
+ranef(mod_reload)
+
+prior_summary(mod_reload)
+
+brms::stancode(mod_reload)
+
 lobstr::obj_size(mod_reload)
 
 

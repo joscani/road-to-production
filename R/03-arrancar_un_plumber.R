@@ -11,4 +11,6 @@ in_bg_plumb <- callr::r_bg(function(){
   pr(here::here("R/02-ejemplo_plumber.R")) |>
     pr_run(port=8000)})
 
+
+
 system(stringr::str_glue("kill {in_bg_plumb$get_pid()}"))

@@ -8,6 +8,7 @@
 # http://127.0.0.1:8000/predict
 
 library(tidyverse)
+library(ggdist)
 
 test <-  read_csv(here::here("data/test_local.csv"))
 
@@ -27,6 +28,11 @@ api_res2 <- httr::POST(url = paste0(base_url, "/full_posterior"),
 posterior_values <- httr::content(api_res2, as = "text", encoding = "UTF-8")
 
 
-jsonlite::fromJSON(posterior_values)  %>%
-  head(100)
+posterior_values <- jsonlite::fromJSON(posterior_values)
+
+
+
+posterior_values %>%
+  ggplot(aes(x=.epred, y = as_factor(.row))) +
+  ggdist::stat_halfeye()
 

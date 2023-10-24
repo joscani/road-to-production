@@ -7,9 +7,8 @@ library(ggdist)
 
 test <-  read_csv(here::here("data/test_local.csv"))
 
-# puedes ponerlo como un container  o en azure servirlo como webapp
-base_url <- "http://joscaniplumber.bzdcdcgzhxb0fpd3.eastus.azurecontainer.io:8080"
 
+## con plumber sin async ni sleep de 10 segundos
 
 base_url <- "https://plumberrockerverse.azurewebsites.net"
 
@@ -25,6 +24,7 @@ full_posterior <- jsonlite::fromJSON(predicted_values)
 full_posterior %>%
   ggplot(aes(x = .epred, y = as_factor(.row))) +
   stat_halfeye()
+
 
 
 ### con más cores
@@ -55,7 +55,6 @@ predict_with_plumber <- function( test, endpoint="/predict"){
   RcppSimdJson::fparse(predicted_values)
 }
 
-# nohup docker container run --rm -p 8082:8082 r-minimal-plumber_async &
 start <- Sys.time()
 multiple_users_sequential <- future_map(1:6, ~ predict_with_plumber(head(test), "/predict"))
 
@@ -71,13 +70,20 @@ multiple_users_async <- future_map(1:6, ~ predict_with_plumber(head(test), "/pre
 
 # Time difference of 26.27049 secs
 
-# curl -X POST \
-# -H "Content-Type: application/json" \
-# -d '{"segmento":"Rec","tipo":"C","valor_cliente":0,"edad_cat":"21- 40","n":132}' \
-# https://bayesianplumber.azurewebsites.net/predict
+curl -X POST \
+-H "Content-Type: application/json" \
+-d '{"segmento":"Rec","tipo":"C","valor_cliente":0,"edad_cat":"21- 40","n":132}' \
+https://bayesianplumber.azurewebsites.net/predict
 
 
-## AWS-----
+# puedes ponerlo como un container  o en azure servirlo como webapp
+
+# base_url <- "http://joscaniplumber.bzdcdcgzhxb0fpd3.eastus.azurecontainer.io:8080"
+
+
+
+
+## AWS problemas con el security group, hablar con Rubén-----
 
 aws_url <- "https://46vrd9dczj.eu-west-1.awsapprunner.com:8080"
 api_res <- httr::POST(url = paste0(aws_url, "/predict"),

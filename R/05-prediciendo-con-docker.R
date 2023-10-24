@@ -13,9 +13,6 @@
 
 library(tidyverse)
 
-library(furrr)
-plan(multisession, workers = 6, .cleanup = FALSE)
-options(future.rng.onMisuse="ignore") # future issue
 
 test <-  read_csv(here::here("data/test_local.csv"))
 
@@ -24,7 +21,7 @@ test
 
 
 base_url <- "http://0.0.0.0:8083"
-base_url <- "https://localhost"
+# base_url <- "https://localhost"
 
 (to_predict <-  test %>%
   filter(segmento == "Best" & valor_cliente == 3 ) %>%
@@ -70,6 +67,10 @@ posterior_df %>%
 # Multiples usuarios a la vez ------------
 # simular varios procesos a la vez  para ver como sería varios usuarios atacando a la vez
 
+
+library(furrr)
+plan(multisession, workers = 6, .cleanup = FALSE)
+options(future.rng.onMisuse="ignore") # future issue
 
 
 predict_with_plumber <- function(port, test, endpoint="/predict"){

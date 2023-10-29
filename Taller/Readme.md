@@ -1,14 +1,15 @@
 
-- Introducción. Tenemos un modelo, y ¿ahora qué?  Script con train . 
-  - a demanda, apis
+* Introducción. Tenemos un modelo, y ¿ahora qué?  
+  Escalón 0 Script con train . 
+  - batch, api, nube? 
   
-- Escalera hacia produccion 
+* Escalera hacia produccion 
   - Primer escalón: Bash script, cron, taskscheduller. Ejemplo script 
   - Segundo escalón: api con plumber. Algunos tips. Ejemplo  
   - Tercer escalón: vetiver para tidymodels. plumber api.  mencionar monitorización modelos. Ejemplo
   - Cuarto escalón: Mejora de la api, ¡ Dockerizando. Ejemplo, 
   
-  EJERCICIO: Entrenar un glm sencillo (dar código y modelo por si no da tiempo), crear api y dockerizar con docker de rocker.
+*  EJERCICIO: Entrenar un glm sencillo (dar código y modelo por si no da tiempo), crear api y dockerizar con docker de rocker.
   
   - Quinto escalón: Mejoras, el cielo es el límite. Azure, GCP, AWS, etc.. Ejemplo llamada a una api que está en Azure (desde R y desde python)
   

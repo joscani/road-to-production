@@ -1,0 +1,43 @@
+nohup: no se tendrá en cuenta la entrada
+
+R version 4.3.1 (2023-06-16) -- "Beagle Scouts"
+Copyright (C) 2023 The R Foundation for Statistical Computing
+Platform: x86_64-pc-linux-gnu (64-bit)
+
+R is free software and comes with ABSOLUTELY NO WARRANTY.
+You are welcome to redistribute it under certain conditions.
+Type 'license()' or 'licence()' for distribution details.
+
+  Natural language support but running in an English locale
+
+R is a collaborative project with many contributors.
+Type 'contributors()' for more information and
+'citation()' on how to cite R or R packages in publications.
+
+Type 'demo()' for some demos, 'help()' for on-line help, or
+'help.start()' for an HTML browser interface to help.
+Type 'q()' to quit R.
+
+> source('/opt/ml/launch.R')
+Loading required package: Rcpp
+Loading 'brms' package (version 2.20.4). Useful instructions
+can be found by typing help('brms'). A more detailed introduction
+to the package is available through vignette('brms_overview').
+
+Attaching package: ‘brms’
+
+The following object is masked from ‘package:stats’:
+
+    ar
+
+
+Attaching package: ‘tidybayes’
+
+The following objects are masked from ‘package:brms’:
+
+    dstudent_t, pstudent_t, qstudent_t, rstudent_t
+
+Running plumber API at http://0.0.0.0:8000
+Running swagger Docs at http://127.0.0.1:8000/__docs__/
+2023-10-29 17:08:52.167021 - POST /predict - libcurl/7.81.0 r-curl/5.0.2 httr/1.4.7 @ 172.17.0.1 
+2023-10-29 17:08:57.471843 - POST /full_posterior - libcurl/7.81.0 r-curl/5.0.2 httr/1.4.7 @ 172.17.0.1 

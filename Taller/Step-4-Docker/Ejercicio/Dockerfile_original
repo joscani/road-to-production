@@ -5,8 +5,9 @@ COPY brms_model.rds plumber_async.R launch.R ./
 
 RUN  mkdir /opt/ml \
      && mv brms_model.rds /opt/ml/brms_model.rds \
-     && mv plumber_async.R /opt/ml/plumber.R 
+     && mv launch.R /opt/ml/launch.R \
+     && mv plumber_async.R /opt/ml/plumber.R
 
 EXPOSE 8000
-CMD R -e "source('launch.R')"
+CMD R -e "source('/opt/ml/launch.R')"
 

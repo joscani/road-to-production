@@ -23,18 +23,17 @@ mod_reload <- readRDS("/media/hd1/canadasreche@gmail.com/Jornadas_barcelona_2023
 # test de una BD local
 
 log_info("Filtrando datos de hoy y prediciendo")
-fecha_hoy = as.character(Sys.Date())
-cat(fecha_hoy, "\n")
+fecha_filter = "2023-10-31"
 
 test_today <-  tbl(con, "test") %>%
-  filter(fecha == fecha_hoy)
+  filter(fecha == fecha_filter)
 
 # estimacion puntual
 
 log_info("Escribiendo predicción en la BD")
 prediccion <-  predict(mod_reload, test_today, allow_new_levels = TRUE) %>%
   as.data.frame() %>%
-  mutate(fecha = fecha_hoy)
+  mutate(fecha = fecha_filter)
 
 dbWriteTable(con, "prediccion", prediccion, append = TRUE)
 

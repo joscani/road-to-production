@@ -12,7 +12,7 @@ library(ggdist)
 
 test <-  read_csv(here::here("data/test_local.csv"))
 
-base_url <- "http://127.0.0.1:8000"
+base_url <- "http://0.0.0.0:8000"
 
 api_res <- httr::POST(url = paste0(base_url, "/predict"),
                       body = head(test),

@@ -1,4 +1,3 @@
-nohup docker container run --rm -p 8083:8000 taller_docker > taller.out 2>&1 &
 
 import subprocess
 import requests

@@ -43,6 +43,7 @@ tabla_predicciones.printSchema()
 val tabla_final = predicciones.
     withColumn("score_best_class", col("detailed_prediction.Probabilities.Best"))
 
+tabla_final.show()
 
 
 val con_contribucion = predicciones.withColumn("contributions", col("detailed_prediction.contributions"))
@@ -54,25 +55,16 @@ val shap_values = con_contribucion.select("contributions.*")
 //o directamente
 
 val shap_values_directos = model.transform(test).select("detailed_prediction.contributions.*")
-shap_values_directos.columns
+shap_values_directos.show(false)
 shap_values_directos.select("`edad_cat.40-60`").show()
 
 
+// para escribir una tabla
 
-
-
-// tabla_final.write.mode(SaveMode.Overwrite).saveAsTable("nombre_tabla_salvar")
-
-// write in table historical TODO add score_soho_flag
-
-val deleteFinalPopulation_partition = s"ALTER TABLE rosetta.all_scores DROP IF EXISTS PARTITION(mes_campana= ${MES}01)"
-spark.sql(deleteFinalPopulation_partition)
-
-(leads_scored.select("telefono", "score_residencial", "score_jazztel", "score_soho",
-      "score_pymes", "score_amena", "mes_campana")
+(tabla_predicciones.
      .write
      .mode(SaveMode.Append)
-     .insertInto("rosetta.all_scores"))
+     .insertInto("esquema.nombre_tabla_predicciones"))
 
 
 

@@ -48,3 +48,6 @@ rsconnect/
 .Rproj.user
 
 /.quarto/
+
+# user custom files or
+Taller/Step-4-Docker/Ejercicio/soluciones/

@@ -22,7 +22,7 @@ mod_reload <- readRDS("/media/hd1/canadasreche@gmail.com/Jornadas_barcelona_2023
 # test de una BD local
 
 log_info("Filtrando datos de hoy y prediciendo")
-fecha_filter = "2023-10-31"
+fecha_filter = as.character(Sys.Date())
 
 test_today <-  tbl(con, "test") %>%
   filter(fecha == fecha_filter)

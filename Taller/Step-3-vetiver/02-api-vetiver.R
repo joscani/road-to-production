@@ -8,7 +8,7 @@ board <- board_folder(here::here("Taller/modelos/modelo_vetiver/"), versioned = 
 
 
 
-modelo_reload <- vetiver_pin_read(board, name = "vetiver_iris")
+modelo_reload <- vetiver_pin_read(board, name = "bt_xgboost")
 
 pr() %>%
   vetiver_api(modelo_reload) %>%

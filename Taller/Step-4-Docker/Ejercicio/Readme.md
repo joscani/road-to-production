@@ -6,16 +6,15 @@ El ejercicio consiste en:
 
 3. Modificar el fichero plumber_async.R:
     3.1. Buscar el fichero salvado en paso 2
-    3.2  Eliminar el endpoint /full_posterior
-    3.3  Modificar el endpoint /predict para que haga las predicciones con el modelo logístico
+    3.2  Modificar el endpoint /predict para que haga las predicciones con el modelo logístico
 
 4. Modificar el Dockerfile para que se copie los ficheros correctos. el modelo serializado y el plumber_async.R modificado en punto 3
 
-5. Construir la imagen docker con docker build -t tunombre/ejercicio_taller . -f tu_dockerfile
+5. Construir la imagen docker con `docker build -t tunombre/ejercicio_taller . -f tu_dockerfile`
 
  6. Lanzar imagen docker con  el siguiente comando . En linux
 
-nohup docker container run --rm -p 8083:8000 tunombre/ejercicio_taller > log.out 2>&1
+`nohup docker container run --rm -p 8083:8000 tunombre/ejercicio_taller > log.out 2>&1`
 
 7. Predecir utilizando nuestra api dockerizada
 

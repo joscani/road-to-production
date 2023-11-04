@@ -69,7 +69,7 @@ dim(posterior_pred)
 head(posterior_pred )
 
 posterior_pred %>%
-  ggplot(aes(x=.epred, y = as_factor(.row))) +
+  ggplot(aes(x = .epred, y = as_factor(.row))) +
   ggdist::stat_halfeye()
 
 

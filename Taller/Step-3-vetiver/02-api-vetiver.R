@@ -6,8 +6,6 @@ library(pins)
 
 board <- board_folder(here::here("Taller/modelos/modelo_vetiver/"), versioned = TRUE)
 
-
-
 modelo_reload <- vetiver_pin_read(board, name = "bt_xgboost")
 
 pr() %>%

@@ -3,15 +3,15 @@
 
 ## Arrancar docker creados------
 
-#
-system("nohup docker container run --rm -p 8083:8000 taller_docker > taller.out 2>&1 &")
+# Si ya lo hemos arrancado antes no hace falta lanzar de nuevo el nohup
+# system("nohup docker container run --rm -p 8083:8000 taller_docker > taller.out 2>&1 &")
 
 
 
 library(tidyverse)
 
 
-test <-  read_csv(here::here("data/test_local.csv"))
+test <-  read_csv(here::here("Taller/data/test_local.csv"))
 test
 
 # Elegimos algunas filas

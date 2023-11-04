@@ -1,2 +1,5 @@
-En este paso entrenamos un modelo brms. 
-Se trata de una regresión binomial. Este modelo será el que se use en las apis creadas con plumber
+# `Step 0`
+
+Entrenamos una regresión binomial bayesiana usando brms.  
+
+Será el modelo que usaremos en los siguientes pasos. 

@@ -8,7 +8,7 @@ library(promises)
 future::plan(multicore, workers = 6, .cleanup = FALSE)
 
 
-modelo <- readRDS("brms_model.rds") # aqui hay que cambiar brms_model.rds por el tuyo
+modelo <- readRDS("brms_model.rds")
 
 #* @apiTitle brms predict Api
 #* @apiDescription Endpoints for working with brms model
@@ -40,7 +40,6 @@ function(req, res) {
       res$status <- 400
       return(list(error = "No data submitted"))
     }
-    # esta es la parte que hay que cambiar, para que devuelva probabilidades del glm predict(modelo, newdata, type="response")
     res <- predict(modelo, data) |>
       as.data.frame()
     return(res)

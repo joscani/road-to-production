@@ -32,18 +32,19 @@ bt_workflow <- workflow() %>%
 
 bt_fit <- fit(bt_workflow, data = Chicago_train)
 
+class(bt_fit)
+
 vet_model_xg <- bt_fit %>%
-  # extract_workflow() %>%
   vetiver_model(model_name = "bt_xgboost")
 
 board %>% vetiver_pin_write(vet_model_xg)
 
-# pr()  %>% vetiver_api(vet_model_xg) %>%
-#   pr_run(port = 8080)
-#
-# pr
+pins::pin_versions(board = board, name = "bt_xgboost")
 
+pin
 
 miboard_s3 <-  board_s3(bucket = "taller-barna-ireland", region = "eu-west-1")
 
 miboard_s3 %>% vetiver_pin_write(vet_model_xg)
+
+pins::pin_versions(board = miboard_s3, name = "bt_xgboost")

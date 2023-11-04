@@ -1,4 +1,6 @@
 
+# Taller Road to pRoduction
+
 * Introducción. Tenemos un modelo, y ¿ahora qué?  
   Escalón 0 Script con train . 
   - batch, api, nube? 
@@ -22,6 +24,7 @@ Tiempos:
 Intro inicial: 5 minutos
 
 Escalera hacia producción:
+
   - Primer escalón bash: 10 minutos
   - Segundo escalón : 10 minutos
   - Tercer escalón: 10 minutos

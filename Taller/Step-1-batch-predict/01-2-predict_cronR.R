@@ -39,7 +39,7 @@ dbWriteTable(con, "prediccion", prediccion, append = TRUE)
 
 
 preddb <-  tbl(con, "prediccion")
-print(preddb)
+print(preddb %>% arrange(desc(fecha)))
 
 dbDisconnect(con, shutdown = TRUE)
 

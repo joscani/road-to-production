@@ -70,10 +70,10 @@ multiple_users_async <- future_map(1:6, ~ predict_with_plumber(head(test), "/pre
 
 # Time difference of 26.27049 secs
 
-curl -X POST \
--H "Content-Type: application/json" \
--d '{"segmento":"Rec","tipo":"C","valor_cliente":0,"edad_cat":"21- 40","n":132}' \
-https://bayesianplumber.azurewebsites.net/predict
+# curl -X POST \
+# -H "Content-Type: application/json" \
+# -d '{"segmento":"Rec","tipo":"C","valor_cliente":0,"edad_cat":"21- 40","n":132}' \
+# https://bayesianplumber.azurewebsites.net/predict
 
 
 # puedes ponerlo como un container  o en azure servirlo como webapp
@@ -83,7 +83,9 @@ https://bayesianplumber.azurewebsites.net/predict
 
 
 
-## AWS problemas con el security group, hablar con Rubén-----
+## AWS hubo problemas con el security group, creo qeu ya solucionados.
+
+
 
 aws_url <- "https://46vrd9dczj.eu-west-1.awsapprunner.com:8080"
 api_res <- httr::POST(url = paste0(aws_url, "/predict"),

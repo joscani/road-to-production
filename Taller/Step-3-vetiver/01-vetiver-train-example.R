@@ -44,6 +44,6 @@ board %>% vetiver_pin_write(vet_model_xg)
 # pr
 
 
-miboard_s3 <-  board_s3(bucket = "taller-barna", region = "eu-south-2")
+miboard_s3 <-  board_s3(bucket = "taller-barna-ireland", region = "eu-west-1")
 
 miboard_s3 %>% vetiver_pin_write(vet_model_xg)

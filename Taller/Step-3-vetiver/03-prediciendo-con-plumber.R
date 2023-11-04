@@ -27,7 +27,3 @@ endpoint <- vetiver_endpoint("http://127.0.0.1:8080/predict")
 predict(endpoint, test)
 
 
-# otras cosas interesantes son vetiver_endpoint_sagemaker
-endpoint <- vetiver_endpoint_sagemaker("vetiver-sagemaker-demo-model")
-
-endpoint

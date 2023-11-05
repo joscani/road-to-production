@@ -30,3 +30,24 @@ Nota: Los modelos de h2o ya sea en h2o standalone o ejecutándose en cluster de 
 
 El código que muestro en `Predict_from_mojo.scala` es el core que puede hacer ahorrar tiempo y dinero a cualquier empresa que esté utilizando Spark. Evita el infierno de dependencias que pueda generarse al utilizar modelos de python o R a la hora de tener modelos que hayan de entrenarse con grandes volúmenes de datos y que además requieran dar predicciones a gran scala. 
 
+
+Requisitos para esta parte del taller: 
+
+* Instalar spark en local. Se puede instalar desde R usando `sparklyr`
+  
+  ```r
+  library(saprklyr)
+  spark_install("3.2")
+  ```
+  
+Si no funciona se puede visitar esta [página](https://archive.apache.org/dist/spark/) y bajar la versión  correspondiente de spark. 
+
+* Java jdk 1.8, en linux es openjdk
+* Instalar h2o y rsparkling para la versión correcta de spark . En esta [página](https://s3.amazonaws.com/h2o-release/sparkling-water/spark-3.2/3.42.0.4-1-3.2/index.html) e ir a la pestaña de `rsparkling`
+
+* Para añadir el jar de sparkling water a spark-shell en la parte de `scala`
+
+```bash
+./spark-shell \
+--jars tus_librerias_R/x86_64-pc-linux-gnu/rsparkling/java/sparkling_water_assembly.jar 
+```

@@ -73,3 +73,31 @@ posterior_pred %>%
   ggdist::stat_halfeye()
 
 
+## modelo 2 con interacciones
+
+
+formula <- brmsformula(
+  target1| resp_weights(n)  ~ (1 | edad_cat) + (1 | valor_cliente) + (1 | edad_cat : valor_cliente)  + (1 | tipo)
+)
+
+mod2 <- brm(
+  formula,
+  family = "bernoulli", data = train,
+  iter = 4000, warmup = 1000, cores = 4,
+  chains = 4,
+  seed = 10,
+  backend = "cmdstanr",
+  refresh = 100) # refresh 0 qu eno quiero que se me llene el post de los output de las cadenas mcm
+
+summary(mod2)
+fixef(mod2)
+ranef(mod2)
+
+prior_summary(mod2)
+
+# mod$data <- train
+saveRDS(mod2, here::here("Taller/modelos/brms_model_interactions.rds"))
+
+
+mod2_reload <- readRDS( here::here("Taller/modelos/brms_model_interactions.rds"))
+

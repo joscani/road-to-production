@@ -4,7 +4,7 @@
 ## Arrancar docker creados------
 
 # Si ya lo hemos arrancado antes no hace falta lanzar de nuevo el nohup
-# system("nohup docker container run --rm -p 8083:8000 taller_docker > taller.out 2>&1 &")
+system("nohup docker container run --rm -p 8083:8000 taller_docker > taller.out 2>&1 &")
 
 
 
@@ -55,3 +55,19 @@ posterior_df %>%
     fill = "Cliente") +
   theme_minimal()
 
+## multiples containers, misma imagen-----
+
+system("nohup docker run -v /media/hd1/canadasreche@gmail.com/Jornadas_barcelona_2023/road-to-production/Taller/Step-4-Docker/modelo_1/:/opt/ml --rm -p 8084:8000 taller_docker_with_volume > taller_mod1.out 2>&1 &")
+
+system("nohup docker run -v /media/hd1/canadasreche@gmail.com/Jornadas_barcelona_2023/road-to-production/Taller/Step-4-Docker/modelo_2/:/opt/ml --rm -p 8085:8000 taller_docker_with_volume > taller_mod2.out 2>&1 &")
+
+base_url <- "http://0.0.0.0:8085"
+api_res <- httr::POST(url = paste0(base_url, "/predict"),
+                      body = to_predict,
+                      encode = "json")
+predicted_values <- httr::content(api_res, as = "text", encoding = "UTF-8")
+
+jsonlite::fromJSON(predicted_values)
+
+
+system("docker stop $(docker ps -a -q)")

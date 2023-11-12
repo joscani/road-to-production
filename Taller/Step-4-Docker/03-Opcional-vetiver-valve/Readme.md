@@ -1,6 +1,6 @@
 ## Valve
 
-[valve`](https://valve.josiahparry.com/) permite crear aplicaciones plumber multihilo. Por debajo usa `Rust` . Llamando al mismo puerto por debajo valve arrancará tantos plumbers como le hayas indicado como máximo y terminarán si no se usan. 
+[`valve`](https://valve.josiahparry.com/) permite crear aplicaciones plumber multihilo. Por debajo usa `Rust` . Llamando al mismo puerto por debajo valve arrancará tantos plumbers como le hayas indicado como máximo y terminarán si no se usan. 
 
 En este contenido opcional, se verá como crear una imagen docker que use valve. La librería tiene funciones interesantes que se llevan bien con las de `vetiver`
 

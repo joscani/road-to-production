@@ -8,8 +8,7 @@ packageVersion("h2o")
 packageVersion("rsparkling")
 
 sc <-  spark_connect(master = "local",
-                     spark_home = "/home/jose/spark/spark-3.2.0-bin-hadoop2.7/",
-                     config = )
+                     spark_home = "/home/jose/spark/spark-3.2.0-bin-hadoop2.7/" )
 
 h2oConf <- H2OConf()
 h2oConf$setBasePort(55555)
@@ -45,6 +44,10 @@ mod <- h2o.xgboost(
 
 summary(mod)
 h2o.varimp_plot(mod)
+h2o.shap_summary_plot(mod, train_hex)
+
 
 fs::dir_create(here::here("modelos/modelo_mojo"))
 h2o.download_mojo(mod, path = here::here("modelos/modelo_mojo"))
+
+spark_disconnect(sc)

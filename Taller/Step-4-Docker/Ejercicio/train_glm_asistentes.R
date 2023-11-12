@@ -21,6 +21,8 @@ mod <- glm(cbind(Best, Other) ~ tipo + valor_cliente + edad_cat,
 summary(mod)
 
 # plot opcional
+sjPlot::plot_model(mod)
+sjPlot::plot_model(mod, transform = NULL)
 sjPlot::plot_model(mod, transform = "plogis")
 
 predict(mod, newdata = head(test), type = "response") %>%

@@ -13,3 +13,17 @@ En este `step` veremos:
 
 * Directorio `Ejercicio`: Entrenar un modelo de regresión binomial, crear una api y crear el Dockerfile para generar nuestro contenedor. Hay un `Readme` en ese directorio explicando el ejercicio, así como script de ayuda para entrenar el modelo binomial y script de ejemplo del plumber a modificar
 
+
+Nota: Salvar un docker en fichero tar.gz
+
+
+```bash
+docker save mi_docker_image | gzip > mi_docker_image.tar.gz
+```
+
+Copiar ese tar.gz a dónde toque
+
+
+```bash
+docker load < mi_docker_image.tar.gz
+```

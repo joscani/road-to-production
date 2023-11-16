@@ -64,6 +64,7 @@ predict(mod_reload, head(test), allow_new_levels = TRUE)
 
 
 posterior_pred <- add_epred_draws(test[1:8, ], mod_reload)
+
 dim(posterior_pred)
 
 head(posterior_pred )
@@ -100,4 +101,20 @@ saveRDS(mod2, here::here("Taller/modelos/brms_model_interactions.rds"))
 
 
 mod2_reload <- readRDS( here::here("Taller/modelos/brms_model_interactions.rds"))
+
+summary(mod2_reload)
+fixef(mod2_reload)
+ranef(mod2_reload)
+
+posterior_pred <- add_epred_draws(test[1:8, ], mod2_reload)
+
+dim(posterior_pred)
+
+head(posterior_pred )
+
+posterior_pred %>%
+  ggplot(aes(x = .epred, y = as_factor(.row),  fill = as_factor(.row))) +
+  ggdist::stat_halfeye() + 
+  labs(fill = "Cliente")
+
 

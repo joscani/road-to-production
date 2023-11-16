@@ -8,6 +8,7 @@ system("nohup docker run -v /media/hd1/canadasreche@gmail.com/Jornadas_barcelona
 
 library(tidyverse)
 library(tidymodels)
+library(vetiver)
 data(Chicago)
 
 

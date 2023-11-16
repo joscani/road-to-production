@@ -2,6 +2,8 @@
 
 library(tidyverse)
 library(ggdist)
+library(future)
+library(furrr)
 
 test <-  read_csv(here::here("Taller/data/test_local.csv"))
 
@@ -42,7 +44,6 @@ full_posterior %>%
 
 ### Simulamos 3 usuarios a la vez atacando a la api -----
 
-library(furrr)
 plan(multisession, workers = 3, .cleanup = FALSE)
 options(future.rng.onMisuse = "ignore") # future issue
 

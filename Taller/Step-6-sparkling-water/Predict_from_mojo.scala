@@ -38,7 +38,7 @@ predicciones.
     show()
 
 
-tabla_predicciones.printSchema()
+predicciones.printSchema()
 
 val tabla_final = predicciones.
     withColumn("score_best_class", col("detailed_prediction.Probabilities.Best"))

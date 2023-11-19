@@ -61,7 +61,7 @@ system("nohup docker run -v /media/hd1/canadasreche@gmail.com/Jornadas_barcelona
 
 system("nohup docker run -v /media/hd1/canadasreche@gmail.com/Jornadas_barcelona_2023/road-to-production/Taller/Step-4-Docker/modelo_2/:/opt/ml --rm -p 8085:8000 taller_docker_with_volume > taller_mod2.out 2>&1 &")
 
-base_url <- "http://0.0.0.0:8085"
+base_url <- "http://0.0.0.0:8084"
 api_res <- httr::POST(url = paste0(base_url, "/predict"),
                       body = to_predict,
                       encode = "json")

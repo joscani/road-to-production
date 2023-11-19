@@ -21,11 +21,11 @@ predict_with_plumber <- function( base_url, test, endpoint="/predict"){
 
 ### Container a pelo, sin https y puerto 8080----
 
-container_url <- "http://joscaniplumber.bzdcdcgzhxb0fpd3.eastus.azurecontainer.io:8080"
-
-# tarda un poco porque en esa api metí un Sys.sleep(10)
-pred_container <- predict_with_plumber(container_url, head(test), endpoint = "/predict")
-pred_container
+# container_url <- "http://joscaniplumber.bzdcdcgzhxb0fpd3.eastus.azurecontainer.io:8080"
+#
+# # tarda un poco porque en esa api metí un Sys.sleep(10)
+# pred_container <- predict_with_plumber(container_url, head(test), endpoint = "/predict")
+# pred_container
 
 
 ### Azure app services , el proveedor pone https y puerto 80-----

@@ -11,7 +11,7 @@ sc <-  spark_connect(master = "local",
                      spark_home = "/home/jose/spark/spark-3.2.0-bin-hadoop2.7/" )
 
 h2oConf <- H2OConf()
-h2oConf$setBasePort(55555)
+# h2oConf$setBasePort(55555)
 h2oConf$set("spark.ext.h2o.cloud.name", "mycloud")
 
 hc <- H2OContext.getOrCreate(h2oConf)

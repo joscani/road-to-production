@@ -1,5 +1,5 @@
 
-# nohup docker container run --rm -p 8083:8000 taller_docker > taller.out 2>&1 &
+nohup docker container run --rm -p 8083:8000 taller_docker > taller.out 2>&1 &
 
 curl -X POST -H "Content-Type: application/json" -d '{"tipo":"C","valor_cliente"
 :0,"edad_cat":"21- 40","n":132}' http://0.0.0.0:8083/predict

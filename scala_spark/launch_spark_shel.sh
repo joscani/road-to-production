@@ -1,7 +1,7 @@
 cd /home/jose/spark/spark-3.2.0-bin-hadoop2.7/bin
 
 ./spark-shell \
---jars /media/hd1/canadasreche@gmail.com/Jornadas_barcelona_2023/road-to-production/renv/library/R-4.3/x86_64-pc-linux-gnu/rsparkling/java/sparkling_water_assembly.jar
+--jars /media/hd1/canadasreche@gmail.com/Jornadas_barcelona_2023/road-to-production/renv/library/R-4.3/x86_64-pc-linux-gnu/rsparkling/java/sparkling_water_assembly.jar \
 --conf spark.executor.instances=1 \
 --conf spark.executor.cores=2 \
 --conf spark.executor.memory=10G \
